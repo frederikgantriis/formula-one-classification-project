@@ -1,0 +1,10 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    outs:
+    - path: F1-Car-Recognition-1
+      hash: md5
+      md5: f88aa2094ded5292eda254150056df18.dir
+      size: 456067230
+      nfiles: 2144
