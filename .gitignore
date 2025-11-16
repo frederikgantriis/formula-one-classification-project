@@ -4,3 +4,6 @@
 uv.lock
 F1-Car-Recognition-1
 src/secrets.py
+src/roboflow_secrets.py
+powermetrics_log.txt
+emissions.csv

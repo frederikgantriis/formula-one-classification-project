@@ -1,0 +1,8 @@
+transform:
+  example: 10
+train:
+  example: 10
+evaluate:
+  example: 10
+visualise:
+  example: 10

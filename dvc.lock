@@ -8,3 +8,39 @@ stages:
       md5: f88aa2094ded5292eda254150056df18.dir
       size: 456067230
       nfiles: 2144
+  transform:
+    cmd: python src/transform.py
+    deps:
+    - path: F1-Car-Recognition-1
+      hash: md5
+      md5: f88aa2094ded5292eda254150056df18.dir
+      size: 456067230
+      nfiles: 2144
+    outs:
+    - path: transformed_data
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: transformed_data
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+    outs:
+    - path: models
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: models
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0

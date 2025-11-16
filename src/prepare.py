@@ -1,5 +1,5 @@
 from roboflow import Roboflow
-from secrets import ROBOFLOWKEY
+from roboflow_secrets import ROBOFLOWKEY
 
 
 def main():
