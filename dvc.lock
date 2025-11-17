@@ -5,14 +5,14 @@ stages:
     deps:
     - path: src/prepare.py
       hash: md5
-      md5: 28507370c4782632e6c6be77055d4f1e
-      size: 319
+      md5: b73b888333e29b2c334161683ae15255
+      size: 316
     outs:
     - path: F1-Car-Recognition-1
       hash: md5
-      md5: f88aa2094ded5292eda254150056df18.dir
-      size: 456067230
-      nfiles: 2144
+      md5: abfd82925d09f8e29f27c550acddcec4.dir
+      size: 456206730
+      nfiles: 4281
   transform:
     cmd: python src/transform.py
     deps:
@@ -71,8 +71,8 @@ stages:
       nfiles: 2144
     - path: src/visualise.py
       hash: md5
-      md5: 32740e2db33021065e0266cbf7933bae
-      size: 102
+      md5: be46926a91785aef2cc61c384f908728
+      size: 2130
     outs:
     - path: img
       hash: md5
