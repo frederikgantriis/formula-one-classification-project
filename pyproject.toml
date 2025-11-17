@@ -9,4 +9,5 @@ dependencies = [
     "dvc>=3.64.0",
     "dvclive>=3.49.0",
     "roboflow>=1.2.11",
+    "ultralytics>=8.3.228",
 ]
