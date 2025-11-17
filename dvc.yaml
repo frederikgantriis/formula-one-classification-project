@@ -31,3 +31,5 @@ stages:
     deps:
     - models
     - src/evaluate.py
+plots:
+- img/plots/images

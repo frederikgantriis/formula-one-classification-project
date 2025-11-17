@@ -7,3 +7,6 @@ repro:
 use_the_force:
   dvc repro --force
 
+exp:
+  dvc exp run
+
