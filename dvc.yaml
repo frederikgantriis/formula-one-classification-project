@@ -5,6 +5,13 @@ stages:
     - src/prepare.py
     outs:
     - F1-Car-Recognition-1
+  visualise:
+    cmd: python src/visualise.py
+    deps:
+    - src/visualise.py
+    - F1-Car-Recognition-1
+    outs:
+    - img
   transform:
     cmd: python src/transform.py
     deps:
