@@ -1,21 +1,26 @@
 stages:
   prepare:
     cmd: python src/prepare.py
+    deps:
+    - src/prepare.py
     outs:
     - F1-Car-Recognition-1
   transform:
     cmd: python src/transform.py
     deps:
     - F1-Car-Recognition-1
+    - src/transform.py
     outs:
     - transformed_data
   train:
     cmd: python src/train.py
     deps:
     - transformed_data
+    - src/train.py
     outs:
     - models
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - models
+    - src/evaluate.py
