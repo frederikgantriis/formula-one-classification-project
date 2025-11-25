@@ -31,23 +31,14 @@ stages:
     deps:
     - models
     - src/evaluate.py
+  demo:
+    cmd: python src/demo.py
+    deps:
+    - models
+    - src/demo.py
 plots:
 - img/plots/images
 - dvclive/plots/metrics:
     x: step
-- dvclive/plots/images
-- dvclive/plots/sklearn/cf.json:
-    template: confusion_normalized
-    x: actual
-    y: predicted
-    title: Confusion Matrix
-    x_label: True Label
-    y_label: Predicted Label
-params:
-- dvclive/params.yaml
 metrics:
 - dvclive/metrics.json
-artifacts:
-  best:
-    path: dvclive/artifacts/best.pt
-    type: model
