@@ -33,6 +33,9 @@ stages:
     - src/evaluate.py
   demo:
     cmd: python src/demo.py
+    always_changed: true
+    params:
+      - demo.url
     deps:
     - models
     - src/demo.py

@@ -9,7 +9,7 @@ def main():
 
     model = YOLO(os.path.join("models", "best.pt"))
 
-    model.track("https://youtu.be/uQc-pW3QLuI?si=-HpDI2v80x5_Rt7c", show=True)
+    model.track(params["url"], show=True)
 
 if __name__ == "__main__":
     main()
