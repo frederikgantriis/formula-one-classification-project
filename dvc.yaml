@@ -35,7 +35,7 @@ stages:
     cmd: python src/demo.py
     always_changed: true
     params:
-      - demo.url
+    - demo.url
     deps:
     - models
     - src/demo.py

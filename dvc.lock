@@ -36,8 +36,8 @@ stages:
     deps:
     - path: src/train.py
       hash: md5
-      md5: 050e99fbb35b7efd35978f70dc9ac3c6
-      size: 424
+      md5: ef8e730106f7b473e8b5023600b7e424
+      size: 690
     - path: transformed_data
       hash: md5
       md5: d751713988987e9331980363e24189ce.dir

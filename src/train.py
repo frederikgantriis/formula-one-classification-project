@@ -10,26 +10,18 @@ def main():
 
     params = params_show()["train"]
 
+    model_name = params["model_name"]
+    epochs = params["epochs"]
+
     tracker = EmissionsTracker()
 
     tracker.start()
 
-    # TODO: Train model
-    model = YOLO("yolo11n.pt")
+    model = YOLO(model_name)
 
     # Train the model using the 'coco8.yaml' dataset for 3 epochs
-    results = model.train(data=os.path.join(
-        "F1-Car-Recognition-1", "data.yaml"), epochs=1)
-
-    # Evaluate the model's performance on the validation set
-    results = model.val()
-
-    # Perform object detection on an image using the model
-    results = model(os.path.join("F1-Car-Recognition-1", "valid",
-                    "images", "00000009_jpg.rf.ae6b2b9a71e445a1533fbadf39387481.jpg"))
-
-    # Export the model to ONNX format
-    success = model.export(format="onnx")
+    model.train(data=os.path.join(
+        "F1-Car-Recognition-1", "data.yaml"), epochs=epochs)
 
     emissions = tracker.stop()
 
